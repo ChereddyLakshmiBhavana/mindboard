@@ -1,0 +1,13 @@
+[build]
+  base = "vite-pro"              # build inside the frontend folder
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
